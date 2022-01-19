@@ -1,6 +1,6 @@
 # Worksheet 1: Space Minesweeper
 
-**Due: Monday, January 24, 11:59pm CDT**
+**Due: Tuesday, January 25, 11:59pm CDT**
 
 For the worksheets in this course, we will provide a Markdown template in a repository that will be created for you through GitHub classroom.  You can clone this repository, directly edit your local copy with your answers, and then commit and push the file to complete the submission.  Alternatively, you can use GitHub's built-in Markdown editor and edit directly on your repository website without having to clone it locally.  If you are unfamiliar with Markdown syntax, then you can check out this [lovely guide provided by GitHub](https://guides.github.com/features/mastering-markdown/) before you get started.
 
