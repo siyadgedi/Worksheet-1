@@ -1,8 +1,8 @@
-# Worksheet 1: Getting Started with TypeScript
+# Worksheet 1: Space Minesweeper
 
 **Due: Monday, January 24, 11:59pm CDT**
 
-For the conceptual worksheets in this course, we will provide a Markdown template in a repository that will be created for you through GitHub classroom.  You can clone this repository, directly edit your local copy with your answers, and then commit and push the file to complete the submission.  Alternatively, you can use GitHub's built-in Markdown editor and edit directly on your repository website without having to clone it locally.  If you are unfamiliar with Markdown syntax, then you can check out this [lovely guide provided by GitHub](https://guides.github.com/features/mastering-markdown/) before you get started.
+For the worksheets in this course, we will provide a Markdown template in a repository that will be created for you through GitHub classroom.  You can clone this repository, directly edit your local copy with your answers, and then commit and push the file to complete the submission.  Alternatively, you can use GitHub's built-in Markdown editor and edit directly on your repository website without having to clone it locally.  If you are unfamiliar with Markdown syntax, then you can check out this [lovely guide provided by GitHub](https://guides.github.com/features/mastering-markdown/) before you get started.
 
 *Do not make a copy of the provided Markdown template and submit that instead.* Our grading scripts will be looking for `README.md` within the root folder of your repository.  You should modify this template directly without changing the filename.
 
@@ -59,6 +59,46 @@ You can quickly try it your code in a web browser using the [TypeScript Playgrou
 
 
 
-## Q2: Pizza
+## Q2: Scene Graphs
 
-To be added.
+Scene graphs are one of the core concepts in computer graphics.  These data structures represent the spatial relationships in a 2D or 3D scene using a collection of nodes in a graph or tree.  A tree node may have many children but only one parent.  When an operate occurs on a parent node, it propagates to all of its children.  In computer graphics, these operations are typically geometric transformations, such as translation, rotation, and scaling. 
+
+In Assignment 1, you will be using Paper.js, a vector graphics library that represents the contents of a 2D scene using a scene graph.  The `Group` class is a node in the scene graph that is designed to hold a collection of objects that can be drawn on the screen.  However, when its children include other `Group` objects, this can create a complex hierarchy of transformations.
+
+In the following example, consider the following two `Group` objects that have a parent-child relationship:
+
+```
+var parentNode = new paper.Group();
+var childNode = new paper.Group();
+childNode.addTo(parentNode);
+```
+
+In the box below, fill in the answers for the position of the child node after each of the parent node transformations.  Note that in this coordinate system, (0, 0) is the top left corner of the screen, and the value of `position.y` increases as you move down.  You may want to draw a diagram to get the rotation values correct.
+
+```
+childNode.position = new paper.Point(3, 4);
+
+// child node position: 3, 4
+
+parentNode.translate(new Point(2, 5));
+
+// child node position: add your answer here
+
+parentNode.rotate(90);  // rotation is clockwise, in degrees
+
+// child node position: add your answer here
+
+parentNode.scale(10);
+
+// child node position: add your answer here
+
+parentNode.translate(new Point(-2, -5));
+
+// child node position: add your answer here
+```
+
+
+
+## License
+
+Material for [CSCI 4611 Spring 2022](https://canvas.umn.edu/courses/290928/assignments/syllabus) by [Evan Suma Rosenberg](https://illusioneering.umn.edu/) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
