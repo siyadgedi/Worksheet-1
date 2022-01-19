@@ -44,7 +44,6 @@ var result = (a: number, b: number) => {
 }
 
 var c = result(22, 42);
-console.log(c);
 ```
 
 One situation where you are likely to encounter arrow functions is when iterating through an array.  The array object has a `forEach` method that takes in an anonymous function as a parameter.  This function gets executed once for every item in the array, taking in the item as a parameter.  In the box below, write an arrow function that iterates through the array and outputs every element to the console:
