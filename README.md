@@ -61,9 +61,9 @@ You can quickly try it your code in a web browser using the [TypeScript Playgrou
 
 ## Q2: Scene Graphs
 
-Scene graphs are one of the core concepts in computer graphics.  These data structures represent the spatial relationships in a 2D or 3D scene using a collection of nodes in a graph or tree.  A tree node may have many children but only one parent.  When an operate occurs on a parent node, it propagates to all of its children.  In computer graphics, these operations are typically geometric transformations, such as translation, rotation, and scaling. 
+Scene graphs are one of the core concepts in computer graphics.  These hierarchical data structures represent the spatial relationships in a 2D or 3D scene using a collection of nodes in a graph or tree.  A tree node may have many children, but can have only one parent.  When an operate occurs on a parent node, it propagates to all of its children.  In computer graphics, these operations are typically geometric transformations, such as translation, rotation, and scaling. 
 
-In Assignment 1, you will be using Paper.js, a vector graphics library that represents the contents of a 2D scene using a scene graph.  The `Group` class is a node in the scene graph that is designed to hold a collection of objects that can be drawn on the screen.  However, when its children include other `Group` objects, this can create a complex hierarchy of transformations.
+In Assignment 1, you will be using Paper.js, a vector graphics library that represents the contents of a 2D scene using a scene graph.  The `Group` class is a node in the scene graph that is designed to hold a collection of objects that can be drawn on the screen.  However, when these children have children of their own, it can create a complex hierarchy of transformations.
 
 In the following example, consider the following two `Group` objects that have a parent-child relationship:
 
